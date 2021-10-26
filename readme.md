@@ -1,5 +1,7 @@
 # Introduction
 
+<!-- v 1.0 -->
+
 ## Code of Conduct
 
 1. There is no such thing as a silly question, you are encouraged to speak up anytime something is not clear to you
@@ -140,6 +142,20 @@ body {
 ```
 
 ```css
+section {
+  display: none;
+}
+
+section:target {
+  display: block;
+}
+```
+
+See demo: https://john-doe.neocities.org/
+
+Or:
+
+```css
 html {
   scroll-behavior: smooth;
 }
@@ -154,20 +170,19 @@ html {
 }
 ```
 
-Or:
+Add jump links to the top of the page in each section:
 
-```css
-section {
-  display: none;
-}
-
-section:target {
-  /* Show section */
-  display: block;
-}
+```html
+<body id="top">
+  ...
+  <a href="#top">Back to top</a>
+  ...
+</body>
 ```
 
-See demo: https://john-doe.neocities.org/
+And style them using the highlight color variable in the CSS file.
+
+Note: the [responsive hamburger menu technique](https://medium.com/@heyoka/responsive-pure-css-off-canvas-hamburger-menu-aebc8d11d793) used in today's sample required that we leave the first link in place. See the article and `nav.css` for more information.
 
 ## DOM Scripting Review
 
@@ -303,7 +318,7 @@ We are using the six existing `<li>` elements in the DOM but there are 8 items i
 
 We need to dynamically generate the nav from items in the array.
 
-Edit the HTML to remove our placeholder navigation links:
+Edit the HTML to remove the navigation links:
 
 ```html
 <nav id="main-menu" class="main-menu" aria-label="Main menu">
@@ -319,8 +334,6 @@ Edit the HTML to remove our placeholder navigation links:
   <ul></ul>
 </nav>
 ```
-
-Note: the [responsive hamburger menu technique](https://medium.com/@heyoka/responsive-pure-css-off-canvas-hamburger-menu-aebc8d11d793) used in today's sample required that we leave the first link in place. See the article and `nav.css` for more information.
 
 Append a `<ul>` tag to nav using:
 
@@ -381,7 +394,7 @@ for (let i = 0; i < navItemsArray.length; i++) {
 nav.append(navList);
 ```
 
-Our nav bar now displays all the items in our array but the code is ugly. This is an example of [imperative programming](https://tylermcginnis.com/imperative-vs-declarative-programming/). In order to prepare for React we need to adopt a more declarative style.
+Our nav bar now displays all the items in our array but the code is ugly. This is an example of [imperative programming](https://tylermcginnis.com/imperative-vs-declarative-programming/). In order to prepare for React we need to adopt a more **declarative** style.
 
 We will use [Functional Programming](https://medium.com/javascript-scene/master-the-javascript-interview-what-is-functional-programming-7f218c68b3a0) techniques.
 
@@ -530,16 +543,6 @@ navItemsObject.forEach(function (item) {
 ```
 
 Navigate and inspect the code and note that we now have anchor tags with page fragment links in our html and are able to navigate within our page.
-
-Add page fragment links:
-
-```html
-<body id="top">
-  ...
-  <a href="#top">Back to top</a>
-  ...
-</body>
-```
 
 ### Aside: Objects
 
@@ -774,9 +777,9 @@ Edit the CSS in `nav.css` (inside the media query).
 
 Note: this would be considered a progressive enhancement as it does not work in all the browsers. Support might be extended by following the instructions on [Can I Use](https://caniuse.com/#feat=css-sticky).
 
-## EXERCISE - Adding an SVG Image
+<!-- ## EXERCISE - Adding an SVG Image -->
 
-Select the first list item on the nav, add a class and set the innerHTML so that we get a link which will return us to the top of the page:
+<!-- Select the first list item on the nav, add a class and set the innerHTML so that we get a link which will return us to the top of the page:
 
 ```js
 // logo
@@ -800,7 +803,7 @@ li.logo img {
 }
 ```
 
-Note the use of max-width above. We are using this because transitions do not animate width.
+Note the use of max-width above. We are using this because transitions do not animate width. -->
 
 ## EXERCISE - AJAX and APIs
 
@@ -1027,16 +1030,16 @@ const navItemsObject = [
 ];
 ```
 
-Examine the rendered page. Note: Arts does not appear in the nav because we are using the first li for our logo. Edit the logo related scripts:
+<!-- Examine the rendered page. Note: Arts does not appear in the nav because we are using the first li for our logo. Edit the logo related scripts: -->
 
-```js
+<!-- ```js
 // logo
 const logo = document.createElement("li");
 const navList = nav.querySelector("nav ul");
 logo.classList.add("logo");
 logo.innerHTML = '<a href="#"><img src="img/logo.svg" /></a>';
 navList.prepend(logo);
-```
+``` -->
 
 Add categories and limit variables to `myscripts.js`:
 
@@ -1099,10 +1102,10 @@ function renderStories(data) {
   sectionHead.innerHTML = `<h3  class="section-head">${data.section}</h3>`;
   root.prepend(sectionHead);
 
-  stories = data.results.slice(0, limit); // NEW
+  const stories = data.results.slice(0, limit); // NEW
 
   stories.map((story) => {
-    storyEl = document.createElement("div");
+    let storyEl = document.createElement("div");
     storyEl.className = "entry";
     storyEl.innerHTML = `
     <img src="${
