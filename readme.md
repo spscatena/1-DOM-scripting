@@ -10,7 +10,7 @@
 
 ## Resources
 
-Your instructor - Daniel Deverell (he, him): Front & Back end developer at Simon Data specializing in design systems, React and Node.
+Your instructor - Daniel Deverell (he, him): Front & Back end developer at JPMorgan Chase specializing in data visualization, React and Node.
 
 - 6:30 PM - 9:30 PM Tuesdays and Thursdays
 - Daniel Deverell, [email](mailto:daniel.deverell@nyu.edu) - `daniel.deverell@nyu.edu`
@@ -37,11 +37,11 @@ Homework will be handed in via Github and then alerting me via email - daniel.de
 
 ## Today's Homework
 
-- Create an account on https://developer.nytimes.com/ and register an API key.
-- Create a web page that retrieves data from the New York Times and display it. The Page can be as simple as you wish and need not include all the features in our exercise.
+- CSS/HTML - using the sample at [https://john-doe.neocities.org/](https://john-doe.neocities.org/), use URL hashes as opposed to scrolling to implement navigation on our page. (Hint: inspect `<header>` and `<main>`.) The resulting page should be tested against unwanted srolling. Try making the nav bar static.
 - Install [Git](https://git-scm.com)
 - Install [NodeJS](https://nodejs.org)
 - Create a Github account
+- Create a Netlify account
 
 ## This Week's Reading
 
@@ -60,7 +60,7 @@ A listing of applications and technologies you will be introduced to in the clas
 - React, NODE, MongoDB, ExpressJS
 - Visual Studio Code and the Terminal
 - Git and Github
-- SASS and Styled Components - for CSS
+- SASS and Styled Components (CSS in JS)
 
 ## VSCode
 
@@ -118,6 +118,8 @@ code .
 Open `index.html`, right click on it and choose 'Open with Live Server'.
 
 ## Single Page App
+
+Add setting for dark mode:
 
 ```css
 @media (prefers-color-scheme: dark) {
