@@ -17,20 +17,10 @@
     <link rel="stylesheet" href="css/nav.css" />
   </head>
 
-  <body>
+  <body id="top">
     <header>
       <h1>All the News That Fits We Print!</h1>
     </header>
-
-    <a
-      href="#main-menu"
-      id="main-menu-toggle"
-      class="menu-toggle"
-      aria-label="Open main menu"
-    >
-      <span class="sr-only">Open main menu</span>
-      <span class="fa fa-bars" aria-hidden="true"></span>
-    </a>
 
     <nav id="main-menu" class="main-menu" aria-label="Main menu">
       <a
@@ -42,28 +32,8 @@
         <span class="sr-only">Close main menu</span>
         <span class="fa fa-close" aria-hidden="true"></span>
       </a>
-
-      <ul>
-        <li>
-          <a href="#home">home</a>
-        </li>
-        <li>
-          <a href="#watchlist">watchlist</a>
-        </li>
-        <li>
-          <a href="#research">research</a>
-        </li>
-        <li>
-          <a href="#markets">markets</a>
-        </li>
-        <li>
-          <a href="#workbook">workbook</a>
-        </li>
-        <li>
-          <a href="#connect">connect</a>
-        </li>
-      </ul>
     </nav>
+
     <a href="#main-menu-toggle" class="backdrop" tabindex="-1" hidden></a>
 
     <div class="site-wrap">
@@ -83,6 +53,8 @@
           class="align-left slide-in"
         />
       </section>
+
+      <a href="#top">back to top</a>
 
       <section id="watchlist">
         <h2>Watchlist</h2>
@@ -202,8 +174,10 @@
       </section>
     </div>
 
-    <script src="js/navitems.js"></script>
+    <!-- <script src="js/navitems.js"></script> -->
 
-    <script src="js/myscripts.js"></script>
+    <script type="module" src="js/myscripts.js"></script>
   </body>
 </html>
+
+<!-- module means i can import something in our javascript -->

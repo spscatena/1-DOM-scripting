@@ -34,6 +34,16 @@
   transition: left 0.3s ease;
   z-index: 999;
 }
+
+.main-menu {
+  display: block;
+  position: static;
+  background: #007eb6;
+  width: 100%;
+  position: sticky;
+  top: 0px;
+}
+
 /* turn off bullets, set width and background color of flyout menu. Width here and "left" property on main-menu should be the same absolute number */
 .main-menu ul {
   list-style: none;

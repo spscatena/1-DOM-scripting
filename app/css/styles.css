@@ -5,8 +5,9 @@
 
 @media (prefers-color-scheme: dark) {
   * {
-    --textcolor: #dadada;
-    --bgcolor: #141414;
+    --textcolor: #eee;
+    --bgcolor: #555;
+    --bgcolor-darker: #333;
     --highlight: #ffc400;
   }
 }
@@ -15,11 +16,25 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
     Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   line-height: 1.4;
+  color: var(--textcolor);
+  background-color: var(--bgcolor);
 }
 
 html {
   box-sizing: border-box;
   background: #eee;
+  scroll-behavior: smooth;
+}
+
+
+
+/**
+ * Disable smooth scrolling when users have prefers-reduced-motion enabled
+ */
+@media screen and (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
 }
 
 *,
@@ -31,9 +46,27 @@ html {
 .site-wrap {
   max-width: 90vw;
   margin: 40px auto;
-  background: white;
+  background: var(--bgcolor-darker);
   padding: 1rem;
   box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.05);
+}
+
+.site-wrap a {
+  color: var(yellow);
+}
+
+/* this is part of the homework */
+
+/* section {
+  display: none;
+}
+
+section:target {
+  display: block;
+} */
+
+section {
+  margin-bottom: 3em;
 }
 
 header {

@@ -1,4 +1,4 @@
-const navItemsArray = [
+export const navItemsArray = [
   "LOGO",
   "Watchlist",
   "Research",
@@ -9,7 +9,7 @@ const navItemsArray = [
   "FAQ",
 ];
 
-const navItemsObject = [
+export const navItemsObject = [
   {
     label: "LOGO",
     link: "#",
