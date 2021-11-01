@@ -11,36 +11,28 @@ export const navItemsArray = [
 
 export const navItemsObject = [
   {
-    label: "LOGO",
-    link: "#",
+    label: "arts",
+    link: "#arts",
   },
   {
-    label: "Watchlist",
-    link: "#watchlist",
+    label: "books",
+    link: "#books",
   },
   {
-    label: "Research",
-    link: "#research",
+    label: "fashion",
+    link: "#fashion",
   },
   {
-    label: "Markets",
-    link: "#markets",
+    label: "food",
+    link: "#food",
   },
   {
-    label: "Workbook",
-    link: "#workbook",
+    label: "movies",
+    link: "#movies",
   },
   {
-    label: "Connect",
-    link: "#connect",
-  },
-  {
-    label: "Desktop",
-    link: "#desktop",
-  },
-  {
-    label: "FAQ",
-    link: "#faq",
+    label: "travel",
+    link: "#travel",
   },
 ];
 
